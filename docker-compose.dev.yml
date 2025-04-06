@@ -1,0 +1,11 @@
+services:
+  gridcp-proxmox-go:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: go test ./...
+    environment:
+      - PROXMOX_URL=${PROXMOX_URL}
+      - PROXMOX_USER=${PROXMOX_USER}
+      - PROXMOX_PASSWORD=${PROXMOX_PASSWORD}
