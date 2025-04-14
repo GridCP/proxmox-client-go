@@ -18,14 +18,5 @@ jobs:
       - uses: google-github-actions/release-please-action@v4
         with:
           release-type: go
-          changelog-types: >-
-            [
-              {"type":"feat","section":"🚀 Features"},
-              {"type":"fix","section":"🐛 Fixes"},
-              {"type":"chore","section":"🔧 Chores"},
-              {"type":"docs","section":"📚 Docs"},
-              {"type":"refactor","section":"🛠 Refactoring"}
-            ]
-          include-component-in-tag: false
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
